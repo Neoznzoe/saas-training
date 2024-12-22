@@ -1,0 +1,27 @@
+.navbar {
+    position: sticky;
+    top: 1em;
+    z-index: 9999;
+
+    &-content {
+        padding: 1em 0;
+        text-align: center;
+        font-size: 1rem;
+
+        &-links {
+            @include flexbox($gap: 1em, $display: inline-flex);
+            
+            border-radius: $border-radius-full;
+            padding: .5em 2em;
+            box-shadow: $box-shadow-default;
+            background: white;   
+        }
+
+        &-link {
+            transition: 0.3s ease;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}

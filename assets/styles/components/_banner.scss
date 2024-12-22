@@ -1,0 +1,23 @@
+.banner {
+    &-image {
+        height: 10rem;
+        border-radius: 100%;
+    }
+
+    &-title {
+        max-width: 80%;
+        font-weight: bold;
+    }
+
+    &-text {
+        max-width: 80%;
+    }
+
+    &-icons-list {
+        @include flexbox($gap: 1.5em, $display:inline-flex);
+    }
+
+    &-icons-items .bi {
+        font-size: 2rem;
+    }
+}

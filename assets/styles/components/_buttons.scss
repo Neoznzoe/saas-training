@@ -1,0 +1,31 @@
+%btn {
+    padding: .25rem .5rem;
+
+    border-radius: $border-radius;
+    transition: 
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+@each $color, $value in $color-palette {
+    .btn-#{$color} {
+        @extend %btn;
+        background: $value;
+        color: getTextColor($value);
+
+        &:hover {
+            background: darken($value, 10%);
+        }
+    }
+
+    .btn-outline-#{$color} {
+        @extend %btn;
+        background: transparent;
+        border: 1px solid $value;
+
+        &:hover {
+            background: $value;
+            color: getTextColor($value);
+        }
+    }
+}

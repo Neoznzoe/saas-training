@@ -1,0 +1,21 @@
+.content-layout {
+    display: flex;
+    gap: 1.5rem;
+
+    &-right {
+        @include flexbox($direction: column);
+        gap: 2rem;
+        height: fit-content;
+        position: sticky;
+        width: 100%;
+        top: 1rem;
+    }
+}
+
+.articles {
+    flex: 2;
+}
+
+.contact {
+    flex: 1;
+}

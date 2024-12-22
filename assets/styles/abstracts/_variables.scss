@@ -1,0 +1,28 @@
+//colors
+$text-muted: rgb(108, 117, 125);
+
+$color-palette: (
+    primary: #007bff,
+    secondary: #6c757d,
+    success: #28a745,
+    info: #17a2b8,
+    warning: #ffc107,
+    danger: #dc3545,
+    light: #f8f9fa,
+    dark: #343a40,
+    text-light: #9DA4AA,
+);
+
+$primary: map-get($color-palette, primary);
+$secondary: map-get($color-palette, $key: secondary);
+
+//Border-radius
+$border-radius: 8px;
+$border-radius-full: 999px;
+
+//Box-shadow
+$box-shadow-default: rgba(0,0,0,0.2) 0px 1px 4px;
+
+//Font Family
+$font-default: 'Lato', sans-serif;
+$font-heading: 'Poppins', sans-serif;

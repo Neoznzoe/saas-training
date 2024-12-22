@@ -1,0 +1,45 @@
+.article {
+
+    @include flexbox($gap: 2rem, $direction: column);
+
+    &-content {
+        box-shadow: $box-shadow-default;
+        border-radius: $border-radius;
+        padding: 1rem 2rem;
+        @include flexbox($gap: .5em, $direction: column);
+        
+    
+        &:hover {
+            transition: .3 ease;
+            background: ghostwhite;
+        }
+
+        button {
+            @extend %btn;
+            background: white;
+            border: 0px;
+            box-shadow: $box-shadow-default;
+
+            &:hover {
+                background: darken(white, 5%);
+            }
+        }
+    }
+
+    &-date {
+        color: map-get($map: $color-palette, $key: text-light);
+        font-size: .8rem;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    
+    &-text {
+        font-size: .8rem;
+        color: map-get($map: $color-palette, $key: secondary);
+        
+    }
+
+}

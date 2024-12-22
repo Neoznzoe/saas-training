@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Page d'accueil || Ma page d'accueil
+{% endblock %}
+
+{% block body %}
+    {% include "home/_banner.html.twig" %}
+    {% include "home/_carroussel.html.twig" %}
+
+    <section class="container content-layout mt-5">
+        <div class="content-layout-left">
+            {% include 'home/_articles.html.twig' %}
+        </div>
+        <div class="content-layout-right">
+            {% include 'home/_contact.html.twig' %}
+            {% include "home/_works.html.twig" %}
+        </div>
+    </section>
+    <hr class="container">
+
+{% endblock %}

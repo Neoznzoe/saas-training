@@ -7,4 +7,12 @@ import './bootstrap.js';
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/app.scss';
+
+// Import images
+import './img/profil-picture.jpg';
+import './img/carrou1.jpg';
+import './img/carrou2.jpg';
+import './img/carrou3.jpg';
+import './img/carrou4.jpg';
+import './img/carrou5.jpg'

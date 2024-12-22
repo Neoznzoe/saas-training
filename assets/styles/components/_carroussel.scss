@@ -1,0 +1,34 @@
+$rotations: -5deg, -3deg, 2deg, 5deg, -7deg;
+
+.carroussel {
+    width: 100vw;
+
+    &-items {
+        @include flexbox($gap: 1.5rem, $display: inline-flex, $justify: center);
+
+        li {
+            width: calc(20% - 1.5rem);
+        }
+    }
+
+    &-images {
+        @for $i from 1 through length($rotations) {
+            &:nth-child(#{$i}) .carroussel-img {
+                transform: rotate(nth($rotations, $i)) scale(1); // Applique la rotation de la liste
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1) rotate(0deg);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+
+    &-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-default;
+    }
+}

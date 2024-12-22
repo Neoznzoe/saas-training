@@ -1,0 +1,25 @@
+html, body {
+    scroll-behavior: smooth;
+}
+
+html {
+    position: relative;
+    padding: 1em 0;
+    min-height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1em;
+        bottom: 1em;
+        left: 5%;
+        right: 5%;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-default;
+        pointer-events: none;
+    }
+}
+
+body {
+    background: radial-gradient(circle, map-get($color-palette, light), darken map-get($color-palette, light),10%);
+}

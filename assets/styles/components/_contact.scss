@@ -1,0 +1,48 @@
+.contact {
+
+    position: sticky;
+    width: 100%;
+    box-shadow: $box-shadow-default;
+    border-radius: $border-radius;
+    height: max-content;
+    padding: 1rem 2rem;
+
+    &-title {
+        font-size: 1rem;
+        @include flexbox($gap: .2rem, $align: center);
+
+        h1 {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+
+    &-text {
+        font-size: .9rem;
+        line-height: 1.4;
+    }
+
+    &-subscribe {
+
+        @include flexbox($gap: .6rem, $align: center, $display: flex);
+
+        input {
+            @extend %input;
+            width: 100%;
+            flex: 1;
+        }
+
+        button {
+            flex-shrink: 0;
+            @extend %btn;
+            background: white;
+            border: 0px;
+            box-shadow: $box-shadow-default;
+
+            &:hover {
+                background: darken(white, 5%);
+            }
+        }
+    }
+
+}

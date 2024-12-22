@@ -1,0 +1,37 @@
+// Map des spacers avec leurs valeurs correspondantes
+$spacers: (
+    t: 'top',
+    e: 'right',
+    b: 'bottom',
+    s: 'left',
+    y: (t: 'top', b:'bottom'),
+    x: (s: 'left', e: 'right'),
+);
+
+$base-spacing: 0.5rem;
+
+@for $i from 0 through 5 {
+    @each $key, $value in $spacers {
+        @if $key == "y" or $key == "x" {
+            .m#{$key}-#{$i} {
+                @each $subKey, $subValue in $value {
+                    margin-#{$subValue}: $base-spacing * $i;
+                }
+            }
+
+            .p#{$key}-#{$i} {
+                @each $subKey, $subValue in $value {
+                    padding-#{$subValue}: $base-spacing * $i;
+                }
+            }
+        } @else {
+            .m#{$key}-#{$i} {
+                margin-#{$value}: $base-spacing * $i;
+            }
+
+            .p#{$key}-#{$i} {
+                padding-#{$value}: $base-spacing * $i;
+            }
+        }
+    }
+}

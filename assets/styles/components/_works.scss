@@ -1,0 +1,42 @@
+.work {
+
+    position: sticky;
+    width: 100%;
+    box-shadow: $box-shadow-default;
+    border-radius: $border-radius;
+    height: max-content;
+    padding: 1rem 2rem;
+
+    &-title {
+        font-size: 1rem;
+        @include flexbox($gap: .2rem, $align: center);
+
+        h1 {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+
+    &-list {
+
+        &-item {
+            @include flexbox($gap: .6rem, $align: center);
+            margin-bottom: 1rem;
+        }
+
+        &-item-icon {
+            flex: 1;
+
+            h1 {
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+
+        &-item-infos {
+            @include flexbox($justify: space-between);
+            font-size: .8rem;
+            color: map-get($map: $color-palette, $key: text-light);
+        }
+    }
+}
